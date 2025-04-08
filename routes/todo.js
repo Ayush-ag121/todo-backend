@@ -15,7 +15,6 @@ router.get("/tags/all", async (req, res) => {
     ]);
 
     const tags = result[0]?.tags || [];
-    console.log(tags)
     res.status(200).json({ tags });
   } catch (error) {
     console.error("Error fetching tags:", error);
